@@ -162,6 +162,7 @@
                     "vlan_list": [
                         {
                             "vlan_id": 0,
+                            "mac_address" : "00:0a:95:9d:68:16",
                             "ipv4": {
                                 "address": "195.69.146.250",
                                 "routeserver": true,
@@ -175,8 +176,7 @@
                                 "as_macro": "AS-NFLX-V6"
                             }
                         }
-                    ],
-                    "mac_address" : "00:0a:95:9d:68:16" 
+                    ]
                 },
                 {
                     "connected_since": "2009-02-04T00:00:00Z",
@@ -191,6 +191,7 @@
                     "vlan_list": [
                         {
                             "vlan_id": 0,
+                            "mac_address" : "00:0a:95:9d:68:16",
                             "ipv4": {
                                 "address": "195.69.147.250",
                                 "routeserver": true,
@@ -204,8 +205,7 @@
                                 "as_macro": "AS-NFLX-V6"
                             }
                         }
-                    ],
-                    "mac_address" : "00:0a:95:9d:68:16" 
+                    ]
                 }
             ]
         }
@@ -498,6 +498,10 @@
                               "description": "The VLAN ID this connection is placed in",
                               "type": "integer"
                             },
+                            "mac_address": {
+                              "description": "MAC address of the member interface",
+                              "type": "string"
+                            },
                             "ipv4": {
                               "description": "The networks IPv4 address details in this VLAN",
                               "type": "object",
@@ -550,10 +554,6 @@
                         }
                       
 
-                    },
-                    "mac_address": {
-                        "description": "MAC address of the member interface",
-                        "type": "string"
                     }
                   }
                 }
