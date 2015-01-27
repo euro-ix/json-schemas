@@ -135,6 +135,7 @@
     "member_list": [
         {
             "asnum": 2906,
+            "member_type": "peering",
             "name": "Netflix",
             "url": "http://netflix.com/",
             "contact_email": [
@@ -396,6 +397,10 @@
             "asnum": {
               "description": "AS number of the network",
               "type": "integer"
+            },
+            "member_type": {
+              "description": "Participant type: peering, ixp or routeserver",
+              "type": "string"
             },
             "name": {
               "description": "Name of the network",
