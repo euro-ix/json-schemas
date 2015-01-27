@@ -175,7 +175,8 @@
                                 "as_macro": "AS-NFLX-V6"
                             }
                         }
-                    ]
+                    ],
+                    "mac_address" : "00:0a:95:9d:68:16" 
                 },
                 {
                     "connected_since": "2009-02-04T00:00:00Z",
@@ -203,7 +204,8 @@
                                 "as_macro": "AS-NFLX-V6"
                             }
                         }
-                    ]
+                    ],
+                    "mac_address" : "00:0a:95:9d:68:16" 
                 }
             ]
         }
@@ -548,6 +550,10 @@
                         }
                       
 
+                    },
+                    "mac_address": {
+                        "description": "MAC address of the member interface",
+                        "type": "string"
                     }
                   }
                 }
