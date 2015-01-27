@@ -5,7 +5,7 @@
 # Elisa Jasinska <elisa@netflix.com>
 # Nick Hilliard <nick@inex.ie>
 #
-# version 0.3 - 11/04/14 
+# version 0.4 - 01/27/15
 #
 #
 # revision history:
@@ -13,6 +13,9 @@
 # v 0.1 * initial release
 # v 0.2 + included feedback from Steven Bakker (AMS-IX)
 # v 0.3 + included feedback from Nick Hilliard (INEX)
+# v 0.4 + included feedback from Kay Rechthien (ECIX) and Martin Levy
+#         and added Grizz's pee
+#         
 # 
 
 
@@ -20,23 +23,46 @@
 # basic example
 
 {
-    "version": "2014110401",
-    "timestamp": "2014-11-04T00:00:00Z",
-    "ixp_info": {
-        "shortname": "AMS-IX"
-    },
+    "version": "2015012701",
+    "timestamp": "2015-01-27T00:00:00Z",
+    "ixp_list": [
+       {
+          "shortname": "AMS-IX",
+          "ixp_id": 0,
+        }
+    ],
     "member_list": [
         {
             "asnum": 8560
+            "connection_list": [
+                {
+                    "ixp_id": 0,
+                }
+            ]
         },
         {
             "asnum": 197219
+            "connection_list": [
+                {
+                    "ixp_id": 0,
+                }
+            ]
         },
         {
             "asnum": 51088
+            "connection_list": [
+                {
+                    "ixp_id": 0,
+                }
+            ]
         },
         {
             "asnum": 47836
+            "connection_list": [
+                {
+                    "ixp_id": 0,
+                }
+            ]
         }
         # ... more members
     ]
@@ -47,12 +73,12 @@
 # more complex example
 
 {
-    "version": "2014110401",
-    "timestamp": "2014-11-04T00:00:00Z",
+    "version": "2015012701",
+    "timestamp": "2015-01-27T00:00:00Z",
     "ixp_info": {
         "shortname": "AMS-IX",
         "name": "Amsterdam Internet Exchange",
-        "ixp_id": "IX-F#123",
+        "ixf_id": "123",
         "country": "NL",
         "url": "http://www.ams-ix.net/",
         "support_email": "noc@ams-ix.net",
@@ -120,7 +146,7 @@
             ],
             "contact_hours": "8/5",
             "peering_policy": "open",
-            "eering_policy_url": "https://www.netflix.com/openconnect/",
+            "peering_policy_url": "https://www.netflix.com/openconnect/",
             "member_since": "2009-02-04T00:00:00Z",
             "connection_list": [
                 {
@@ -232,9 +258,9 @@
           "description": "Country code of where the IXP is located",
           "type": "string"
         },
-        "ixp_id": {
-          "description": "IXP ID as represented in IXP and PeeringDB",
-          "type": "string"
+        "ixf_id": {
+          "description": "IXP ID as in the IXF database",
+          "type": "integer"
         },
         "support_email": {
           "description": "Technical support email address",
