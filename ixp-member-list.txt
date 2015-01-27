@@ -83,9 +83,13 @@
         "url": "http://www.ams-ix.net/",
         "support_email": "noc@ams-ix.net",
         "support_phone": "+31 20 514 1717",
-        "support_contact_hours": "24/7",
+        "support_contact_hours": "8/5",
+        "emgergency_email": "noc@ams-ix.net",
+        "emgergency_phone": "+31 20 514 1717",
+        "emgergency_contact_hours": "24/7", 
         "billing_email": "info@ams-ix.net",
         "billing_phone": "+31 20 305 89 99",
+        "billing_contact_hours": "8/5",
         "peering_policy_list": [
             "open",
             "selective",
@@ -135,7 +139,7 @@
     "member_list": [
         {
             "asnum": 2906,
-            "member_type": "peering",
+            "member_type": 1,
             "name": "Netflix",
             "url": "http://netflix.com/",
             "contact_email": [
@@ -266,16 +270,29 @@
           "type": "integer"
         },
         "support_email": {
-          "description": "Technical support email address",
+          "description": "Support email address",
           "type": "string",
           "format" : "email"
         },
         "support_phone": {
-          "description": "Technical support phone number",
+          "description": "Support phone number",
           "type": "string"
         },
         "support_contact_hours": {
-          "description": "Technical support contact hours, eg. 24/7, 8/5, etc",
+          "description": "Support contact hours, eg. 24/7, 8/5, etc",
+          "type": "string"
+        },
+        "emergency_email": {
+          "description": "Emergency support email address",
+          "type": "string",
+          "format" : "email"
+        },
+        "emergency_phone": {
+          "description": "Emergency support phone number",
+          "type": "string"
+        },
+        "emergency_contact_hours": {
+          "description": "Emergency support contact hours, eg. 24/7, 8/5, etc",
           "type": "string"
         },
         "billing_email": {
@@ -285,6 +302,10 @@
         },
         "billing_phone": {
           "description": "Billing phone number",
+          "type": "string"
+        },
+        "billing_contact_hours": {
+          "description": "Billing contact hours, eg. 24/7, 8/5, etc",
           "type": "string"
         },
         "peering_policy_list": {
@@ -400,7 +421,8 @@
             },
             "member_type": {
               "description": "Participant type: peering, ixp or routeserver",
-              "type": "string"
+              "type": "enum",
+              "enum": [null,"peering","ixp","routeserver"]
             },
             "name": {
               "description": "Name of the network",
