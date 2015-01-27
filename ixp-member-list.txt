@@ -5,17 +5,25 @@
 # Elisa Jasinska <elisa@netflix.com>
 # Nick Hilliard <nick@inex.ie>
 #
-# version 0.4 - 01/27/15
+# version 0.4 - 01/28/15
 #
 #
 # revision history:
 #
 # v 0.1 * initial release
-# v 0.2 + included feedback from Steven Bakker (AMS-IX)
-# v 0.3 + included feedback from Nick Hilliard (INEX)
-# v 0.4 + included feedback from Kay Rechthien (ECIX) and Martin Levy
-#         and added Grizz's pee
-#         
+# v 0.2 * included feedback from Steven Bakker (AMS-IX)
+# v 0.3 * included feedback from Nick Hilliard (INEX)
+# v 0.4 * included feedback from Kay Rechthien (ECIX), Martin Levy
+#         (CloudFlare) and added Grizz's pee:
+#       + ixp_info -> ixp_list, added ixp_id referenced in
+#         member_list.connection_list entries
+#       + re-named former ixp_id to ixf_id and refined its type
+#       + added emgergency contact fields: emgergency_email,
+#         emgergency_phone, emgergency_contact_hours
+#       + added billing contact hours field: billing_contact_hours
+#       + added member_type field in member_list entries
+#       + fixed typo in peering_policy_url
+#       + added mac_address field in vlan_list entries
 # 
 
 
@@ -23,12 +31,12 @@
 # basic example
 
 {
-    "version": "2015012701",
-    "timestamp": "2015-01-27T00:00:00Z",
+    "version": "2015012801",
+    "timestamp": "2015-01-28T00:00:00Z",
     "ixp_list": [
        {
           "shortname": "AMS-IX",
-          "ixp_id": 0,
+          "ixp_id": 42,
         }
     ],
     "member_list": [
@@ -36,7 +44,7 @@
             "asnum": 8560
             "connection_list": [
                 {
-                    "ixp_id": 0,
+                    "ixp_id": 42,
                 }
             ]
         },
@@ -44,7 +52,7 @@
             "asnum": 197219
             "connection_list": [
                 {
-                    "ixp_id": 0,
+                    "ixp_id": 42,
                 }
             ]
         },
@@ -52,7 +60,7 @@
             "asnum": 51088
             "connection_list": [
                 {
-                    "ixp_id": 0,
+                    "ixp_id": 42,
                 }
             ]
         },
@@ -60,7 +68,7 @@
             "asnum": 47836
             "connection_list": [
                 {
-                    "ixp_id": 0,
+                    "ixp_id": 42,
                 }
             ]
         }
@@ -73,12 +81,13 @@
 # more complex example
 
 {
-    "version": "2015012701",
-    "timestamp": "2015-01-27T00:00:00Z",
+    "version": "2015012801",
+    "timestamp": "2015-01-28T00:00:00Z",
     "ixp_info": {
         "shortname": "AMS-IX",
         "name": "Amsterdam Internet Exchange",
-        "ixf_id": "123",
+        "ixp_id": 42,
+        "ixf_id": 123,
         "country": "NL",
         "url": "http://www.ams-ix.net/",
         "support_email": "noc@ams-ix.net",
@@ -155,6 +164,7 @@
             "member_since": "2009-02-04T00:00:00Z",
             "connection_list": [
                 {
+                    "ixp_id": 42,
                     "connected_since": "2009-02-04T00:00:00Z",
                     "state": "active",
                     "if_list": [
@@ -184,6 +194,7 @@
                     ]
                 },
                 {
+                    "ixp_id": 42,
                     "connected_since": "2009-02-04T00:00:00Z",
                     "state": "active",
                     "if_list": [
@@ -226,7 +237,7 @@
   "title": "IXP Member List Schema",
   "description": "A JSON schema representing an IXP Member List",
   "type": "object",
-  "required": ["version", "timestamp", "ixp_info", "member_list"],
+  "required": ["version", "timestamp", "ixp_list", "member_list"],
   "properties": {
 
     "version": {
@@ -237,176 +248,186 @@
 
     "timestamp": {
       "title": "IXP Member List Schema export timestamp",
-      "description": "Timestamp of the export",
+      "description": "Timestamp of the data export",
       "type": "string",
       "format": "date-time"
     },
 
-    "ixp_info": {
-      "title": "IXP Info",
-      "description": "A schema representing IXP information",
-      "type": "object",
-      "properties": {
+    "ixp_list": {
+      "title": "IXP Info List",
+      "description": "A list of schemas representing IXP information",
+      "type": "array",
+      "items":
+        {
+          "description": "A single IXP entry",
+          "type": "object",
+          "required": ["ixp_id","shortname"],
+          "properties": {
 
-        "shortname": {
-          "description": "Short name of the IXP",
-          "type": "string"
-        },
-        "name": {
-          "description": "Name of the IXP",
-          "type": "string"
-        },
-        "url": {
-          "description": "Website of the IXP",
-          "type": "string",
-          "format": "uri"
-        },
-        "country": {
-          "description": "Country code of where the IXP is located",
-          "type": "string"
-        },
-        "ixf_id": {
-          "description": "IXP ID as in the IXF database",
-          "type": "integer"
-        },
-        "support_email": {
-          "description": "Support email address",
-          "type": "string",
-          "format" : "email"
-        },
-        "support_phone": {
-          "description": "Support phone number",
-          "type": "string"
-        },
-        "support_contact_hours": {
-          "description": "Support contact hours, eg. 24/7, 8/5, etc",
-          "type": "string"
-        },
-        "emergency_email": {
-          "description": "Emergency support email address",
-          "type": "string",
-          "format" : "email"
-        },
-        "emergency_phone": {
-          "description": "Emergency support phone number",
-          "type": "string"
-        },
-        "emergency_contact_hours": {
-          "description": "Emergency support contact hours, eg. 24/7, 8/5, etc",
-          "type": "string"
-        },
-        "billing_email": {
-          "description": "Billing email address",
-          "type": "string",
-          "format" : "email"
-        },
-        "billing_phone": {
-          "description": "Billing phone number",
-          "type": "string"
-        },
-        "billing_contact_hours": {
-          "description": "Billing contact hours, eg. 24/7, 8/5, etc",
-          "type": "string"
-        },
-        "peering_policy_list": {
-          "description": "Peering policy choices available in the member list",
-          "type": "array",
-          "items":
-            {
+            "ixp_id": {
+              "description": "IXP numeric identifier",
+              "type": "integer"
+            },
+            "shortname": {
+              "description": "Short name of the IXP",
               "type": "string"
-            }          
-        },
-
-        "switch": {
-          "description": "Switches available at the IXP",
-          "type": "array",
-          "items":
-            {
-              "type": "object",
-              "properties": {
-
-                "id": {
-                  "description": "Unique ID of the switch",
-                  "type": "integer"
-                },
-                "name": {
-                  "description": "Switch name",
-                  "type": "string"
-                },
-                "colo": {
-                  "description": "Colo the switch is located in",
-                  "type": "string"
-                },
-                "city": {
-                  "description": "City the switch is located in",
-                  "type": "string"
-                },
-                "country": {
-                  "description": "Country the switch is located in",
+            },
+            "name": {
+              "description": "Name of the IXP",
+              "type": "string"
+            },
+            "url": {
+              "description": "Website of the IXP",
+              "type": "string",
+              "format": "uri"
+            },
+            "country": {
+              "description": "Country code of where the IXP is located",
+              "type": "string"
+            },
+            "ixf_id": {
+              "description": "IXP ID as in the IXF database",
+              "type": "integer"
+            },
+            "support_email": {
+              "description": "Support email address",
+              "type": "string",
+              "format" : "email"
+            },
+            "support_phone": {
+              "description": "Support phone number",
+              "type": "string"
+            },
+            "support_contact_hours": {
+              "description": "Support contact hours, eg. 24/7, 8/5, etc",
+              "type": "string"
+            },
+            "emergency_email": {
+              "description": "Emergency support email address",
+              "type": "string",
+              "format" : "email"
+            },
+            "emergency_phone": {
+              "description": "Emergency support phone number",
+              "type": "string"
+            },
+            "emergency_contact_hours": {
+              "description": "Emergency support contact hours, eg. 24/7, 8/5, etc",
+              "type": "string"
+            },
+            "billing_email": {
+              "description": "Billing email address",
+              "type": "string",
+              "format" : "email"
+            },
+            "billing_phone": {
+              "description": "Billing phone number",
+              "type": "string"
+            },
+            "billing_contact_hours": {
+              "description": "Billing contact hours, eg. 24/7, 8/5, etc",
+              "type": "string"
+            },
+            "peering_policy_list": {
+              "description": "Peering policy choices available in the member list",
+              "type": "array",
+              "items":
+                {
                   "type": "string"
                 }
-              }
-            }
-        },
+            },
 
-        "vlan": {
-          "description": "VLANs available at the IXP",
-          "type": "array",
-          "items": 
-            {
-              "description": "A single VLAN entry",
-              "type": "object",
-              "properties": {
-
-                "id": {
-                  "description": "Unique ID of the VLAN",
-                  "type": "integer"
-                },
-                "name": {
-                  "description": "VLAN name",
-                  "type": "string"
-                },
-                "ipv4": {
-                  "description": "IPv4 details in this VLAN",
+            "switch": {
+              "description": "Switches available at the IXP",
+              "type": "array",
+              "items":
+                {
                   "type": "object",
                   "properties": {
 
-                    "prefix": {
-                      "description": "Prefix of the IPv4 address",
-                      "type": "string",
-                      "format": "ipv4"
-                    },
-                    "mask_length": {
-                      "description": "Mask length of the IPv4 address",
+                    "id": {
+                      "description": "Unique ID of the switch",
                       "type": "integer"
-                    }
-                  }
-                },
-                "ipv6": {
-                  "description": "IPv6 details in this VLAN",
-                  "type": "object",
-                  "properties": {
-
-                    "prefix": {
-                      "description": "Prefix of the IPv6 address",
-                      "type": "string",
-                      "format": "ipv6"
                     },
-                    "mask_length": {
-                      "description": "Mask length of the IPv6 address",
-                      "type": "integer"
+                    "name": {
+                      "description": "Switch name",
+                      "type": "string"
+                    },
+                    "colo": {
+                      "description": "Colo the switch is located in",
+                      "type": "string"
+                    },
+                    "city": {
+                      "description": "City the switch is located in",
+                      "type": "string"
+                    },
+                    "country": {
+                      "description": "Country the switch is located in",
+                      "type": "string"
                     }
                   }
                 }
-              }
+            },
+
+            "vlan": {
+              "description": "VLANs available at the IXP",
+              "type": "array",
+              "items":
+                {
+                  "description": "A single VLAN entry",
+                  "type": "object",
+                  "properties": {
+
+                    "id": {
+                      "description": "Unique ID of the VLAN",
+                      "type": "integer"
+                    },
+                    "name": {
+                      "description": "VLAN name",
+                      "type": "string"
+                    },
+                    "ipv4": {
+                      "description": "IPv4 details in this VLAN",
+                      "type": "object",
+                      "properties": {
+
+                        "prefix": {
+                          "description": "Prefix of the IPv4 address",
+                          "type": "string",
+                          "format": "ipv4"
+                        },
+                        "mask_length": {
+                          "description": "Mask length of the IPv4 address",
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "ipv6": {
+                      "description": "IPv6 details in this VLAN",
+                      "type": "object",
+                      "properties": {
+
+                        "prefix": {
+                          "description": "Prefix of the IPv6 address",
+                          "type": "string",
+                          "format": "ipv6"
+                        },
+                        "mask_length": {
+                          "description": "Mask length of the IPv6 address",
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
             }
+          }
         }
-      }
     },
 
     "member_list": {
       "title": "IXP Member List",
-      "description": "A schema representing the IXP's Member List",
+      "description": "A list of schemas representing IXP members",
       "type": "array",
       "items":
         {
