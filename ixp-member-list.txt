@@ -35,40 +35,40 @@
     "timestamp": "2015-01-28T00:00:00Z",
     "ixp_list": [
        {
-          "shortname": "AMS-IX",
           "ixp_id": 42,
+          "shortname": "AMS-IX"
         }
     ],
     "member_list": [
         {
-            "asnum": 8560
+            "asnum": 8560,
             "connection_list": [
                 {
-                    "ixp_id": 42,
+                    "ixp_id": 42
                 }
             ]
         },
         {
-            "asnum": 197219
+            "asnum": 197219,
             "connection_list": [
                 {
-                    "ixp_id": 42,
+                    "ixp_id": 42
                 }
             ]
         },
         {
-            "asnum": 51088
+            "asnum": 51088,
             "connection_list": [
                 {
-                    "ixp_id": 42,
+                    "ixp_id": 42
                 }
             ]
         },
         {
-            "asnum": 47836
+            "asnum": 47836,
             "connection_list": [
                 {
-                    "ixp_id": 42,
+                    "ixp_id": 42
                 }
             ]
         }
@@ -433,7 +433,7 @@
         {
           "description": "A single member entry",
           "type": "object",
-          "required": ["asnum"],
+          "required": ["asnum","connection_list"],
           "properties": {
 
             "asnum": {
@@ -497,8 +497,13 @@
                 {
                   "description": "A single connection entry",
                   "type": "object",
+                  "required": ["ixp_id"],
                   "properties": {
 
+                    "ixp_id": {
+                      "description": "IXP numeric identifier",
+                      "type": "integer"
+                    },
                     "state": {
                       "description": "State of the connection",
                       "type": "string"
