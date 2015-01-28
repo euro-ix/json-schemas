@@ -83,7 +83,8 @@
 {
     "version": "2015012801",
     "timestamp": "2015-01-28T00:00:00Z",
-    "ixp_info": {
+    "ixp_list": [
+      {
         "shortname": "AMS-IX",
         "name": "Amsterdam Internet Exchange",
         "ixp_id": 42,
@@ -144,11 +145,12 @@
                 }
             }
         ]
-    },
+      }
+    ],
     "member_list": [
         {
             "asnum": 2906,
-            "member_type": 1,
+            "member_type": "peering",
             "name": "Netflix",
             "url": "http://netflix.com/",
             "contact_email": [
@@ -441,9 +443,9 @@
               "type": "integer"
             },
             "member_type": {
-              "description": "Participant type: peering, ixp or routeserver",
-              "type": "enum",
-              "enum": [null,"peering","ixp","routeserver"]
+              "description": "Participant type: peering, ixp, routeserver or other",
+              "type": "string",
+              "enum": ["peering","ixp","routeserver","other"]
             },
             "name": {
               "description": "Name of the network",
