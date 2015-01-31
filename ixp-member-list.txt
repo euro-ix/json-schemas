@@ -24,7 +24,8 @@
 #       + added member_type field in member_list entries
 #       + fixed typo in peering_policy_url
 #       + added mac_address field in vlan_list entries
-# 
+#       + added stats_api field in ixp_list entries
+#
 
 
 #######################################################################
@@ -91,6 +92,7 @@
         "ixf_id": 123,
         "country": "NL",
         "url": "http://www.ams-ix.net/",
+        "stats_api": "https://my.ams-ix.net/api/v1/members.json",
         "support_email": "noc@ams-ix.net",
         "support_phone": "+31 20 514 1717",
         "support_contact_hours": "8/5",
@@ -280,6 +282,11 @@
             },
             "url": {
               "description": "Website of the IXP",
+              "type": "string",
+              "format": "uri"
+            },
+            "stats_api": {
+              "description": "URL to statistics API",
               "type": "string",
               "format": "uri"
             },
