@@ -25,6 +25,7 @@
 #       + fixed typo in peering_policy_url
 #       + added mac_address field in vlan_list entries
 #       + added stats_api field in ixp_list entries
+#       + changed version to dotted format
 #
 
 
@@ -32,7 +33,7 @@
 # basic example
 
 {
-    "version": "2015012801",
+    "version": "0.4",
     "timestamp": "2015-01-28T00:00:00Z",
     "ixp_list": [
        {
@@ -252,7 +253,7 @@
 
     "timestamp": {
       "title": "IXP Member List Schema export timestamp",
-      "description": "Timestamp of the data export",
+      "description": "Timestamp of when the data was export",
       "type": "string",
       "format": "date-time"
     },
