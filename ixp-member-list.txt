@@ -253,7 +253,7 @@
 
     "timestamp": {
       "title": "IXP Member List Schema export timestamp",
-      "description": "Timestamp of when the data was export",
+      "description": "Timestamp of when the data was exported",
       "type": "string",
       "format": "date-time"
     },
