@@ -2,3 +2,4 @@
 2. ECIX
 3. BCIX
 4. NAPAfrica
+5. AMS-IX
