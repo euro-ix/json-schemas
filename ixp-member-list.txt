@@ -501,7 +501,7 @@
             },
 
             "connection_list": {
-              "description": "List of connection of the network at the IXP",
+              "description": "List of connections of the network at the IXP",
               "type": "array",
               "items":
                 {
@@ -519,7 +519,7 @@
                       "type": "string"
                     },
                     "connected_since": {
-                      "description": "Date when the connection has been activated",
+                      "description": "Date when the connection was activated",
                       "type": "string",
                       "format": "date-time"
                     },
@@ -533,7 +533,7 @@
                           "properties": {
 
                             "switch_id": {
-                              "description": "Switch od of where the interface or LAG is connected",
+                              "description": "Switch id of where the interface or LAG is connected",
                               "type": "integer"
                             },
                             "if_speed": {
@@ -584,7 +584,7 @@
                                   "type": "integer"
                                 },
                                 "routeserver": {
-                                  "description": "Does this IPv4 connection participate in the routeserver",
+                                  "description": "Does this IPv4 address connect to the IXP routeserver",
                                   "type": "boolean"
                                 }
                               }
@@ -604,11 +604,11 @@
                                   "type": "string"
                                 },
                                 "max_prefix": {
-                                  "description": "The max prefix on this connection for IPv6",
+                                  "description": "The max prefixes on this connection for IPv6",
                                   "type": "integer"
                                 },
                                 "routeserver": {
-                                  "description": "Does this IPv6 connection participate in the routeserver",
+                                  "description": "Does this IPv6 address connect to the IXP routeserver",
                                   "type": "boolean"
                                 }
                               }
