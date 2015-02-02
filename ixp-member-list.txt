@@ -292,11 +292,11 @@
               "format": "uri"
             },
             "country": {
-              "description": "Country code of where the IXP is located",
+              "description": "ISO country code where the IXP is located",
               "type": "string"
             },
             "ixf_id": {
-              "description": "IXP ID as in the IXF database",
+              "description": "IXP ID from the IX-F database",
               "type": "integer"
             },
             "support_email": {
@@ -451,9 +451,9 @@
               "type": "integer"
             },
             "member_type": {
-              "description": "Participant type: peering, ixp, routeserver or other",
+              "description": "Participant type: peering, ixp, pro bono, routeserver or other",
               "type": "string",
-              "enum": ["peering","ixp","routeserver","other"]
+              "enum": ["peering","ixp","routeserver","probono","other"]
             },
             "name": {
               "description": "Name of the network",
@@ -474,7 +474,7 @@
               "format": "uri"
             },
             "member_since": {
-              "description": "Date when the network joined the IX",
+              "description": "Date when the network joined the IXP",
               "type": "string",
               "format": "date-time"
             },
