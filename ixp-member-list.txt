@@ -26,6 +26,7 @@
 #       + added mac_address field in vlan_list entries
 #       + added stats_api field in ixp_list entries
 #       + changed version to dotted format
+#       + spelin fixxups and apostrophe's
 #
 
 
@@ -469,7 +470,7 @@
               "type": "string"
             },
             "peering_policy_url": {
-              "description": "URL to the networks peering policy",
+              "description": "URL to the network's peering policy",
               "type": "string",
               "format": "uri"
             },
@@ -533,7 +534,7 @@
                           "properties": {
 
                             "switch_id": {
-                              "description": "Switch id of where the interface or LAG is connected",
+                              "description": "Switch id where the interface or LAG is connected",
                               "type": "integer"
                             },
                             "if_speed": {
@@ -566,7 +567,7 @@
                               "type": "string"
                             },
                             "ipv4": {
-                              "description": "The networks IPv4 address details in this VLAN",
+                              "description": "The network's IPv4 address details in this VLAN",
                               "type": "object",
                               "properties": {
 
@@ -580,7 +581,7 @@
                                   "type": "string"
                                 },
                                 "max_prefix": {
-                                  "description": "The max prefix on this connection for IPv4",
+                                  "description": "The max number of prefixes on this connection for IPv4",
                                   "type": "integer"
                                 },
                                 "routeserver": {
@@ -590,7 +591,7 @@
                               }
                             },
                             "ipv6": {
-                              "description": "The networks IPv6 address details in this VLAN",
+                              "description": "The network's IPv6 address details in this VLAN",
                               "type": "object",
                               "properties": {
 
@@ -604,7 +605,7 @@
                                   "type": "string"
                                 },
                                 "max_prefix": {
-                                  "description": "The max prefixes on this connection for IPv6",
+                                  "description": "The max number of prefixes on this connection for IPv6",
                                   "type": "integer"
                                 },
                                 "routeserver": {
