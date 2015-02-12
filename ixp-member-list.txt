@@ -14,7 +14,7 @@
 # v 0.2 * included feedback from Steven Bakker (AMS-IX)
 # v 0.3 * included feedback from Nick Hilliard (INEX)
 # v 0.4 * included feedback from Kay Rechthien (ECIX), Martin Levy
-#         (CloudFlare) and added Grizz's pee:
+#         (CloudFlare) and added Grizz's p:
 #       + ixp_info -> ixp_list, added ixp_id referenced in
 #         member_list.connection_list entries
 #       + re-named former ixp_id to ixf_id and refined its type
@@ -28,7 +28,8 @@
 #       + changed version to dotted format
 #       + spelin fixxups and apostrophe's
 #
-
+# v 0.5 * included feedback from Arnold Nipper (DE-CIX):
+#       + pdb_facility_id added to switch
 
 #######################################################################
 # basic example
@@ -116,6 +117,7 @@
                 "id": 0,
                 "name": "PXC-TC5-144",
                 "colo": "Telecity 5",
+                "pdb_facility_id": 1236,
                 "city": "Amsterdam",
                 "country": "NL"
             },
@@ -123,6 +125,7 @@
                 "id": 1,
                 "name": "PXC-GLO-146",
                 "colo": "Global Switch",
+                "pdb_facility_id": 63,
                 "city": "Amsterdam",
                 "country": "NL"
             }
@@ -367,6 +370,10 @@
                     "colo": {
                       "description": "Colo the switch is located in",
                       "type": "string"
+                    },
+                    "pdb_facility_id": {
+                      "description": "Peering DB ID of the data centre",
+                      "type": "integer"
                     },
                     "city": {
                       "description": "City the switch is located in",
