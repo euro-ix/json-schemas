@@ -5,7 +5,7 @@
 # Elisa Jasinska <elisa@netflix.com>
 # Nick Hilliard <nick@inex.ie>
 #
-# version 0.4 - 01/28/15
+# version 0.5 - 02/17/15
 #
 #
 # revision history:
@@ -27,15 +27,15 @@
 #       + added stats_api field in ixp_list entries
 #       + changed version to dotted format
 #       + spelin fixxups and apostrophe's
-#
 # v 0.5 * included feedback from Arnold Nipper (DE-CIX):
 #       + pdb_facility_id added to switch
+
 
 #######################################################################
 # basic example
 
 {
-    "version": "0.4",
+    "version": "0.5",
     "timestamp": "2015-01-28T00:00:00Z",
     "ixp_list": [
        {
