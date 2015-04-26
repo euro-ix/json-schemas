@@ -1,8 +1,13 @@
-1. INEX
-2. ECIX
-3. BCIX
-4. NAPAfrica
-5. AMS-IX
-6. FL-IX
-7. LONAP
-8. United IX
+01. INEX
+02. ECIX
+03. BCIX
+04. NAPAfrica
+05. AMS-IX
+06. FL-IX
+07. LONAP
+08. United IX
+09. DE-CIX Frankfurt
+10. DE-CIX Hamburg
+11. DE-CIX Munich
+12. DE-CIX New York
+13. UAE-IX
