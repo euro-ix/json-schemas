@@ -2,7 +2,7 @@
 #######################################################################
 # IX Member List Schema
 #
-# Elisa Jasinska <elisa@netflix.com>
+# Elisa Jasinska <elisa@bigwaveit.org>
 # Nick Hilliard <nick@inex.ie>
 #
 # version 0.4 - 01/28/15
@@ -159,7 +159,7 @@
             "url": "http://netflix.com/",
             "contact_email": [
                 "peering@netflix.com",
-                "elisa@netflix.com"
+                "mrpeering@netflix.com"
             ],
             "contact_phone": [
                 "+1 1234 5678"
