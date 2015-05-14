@@ -84,7 +84,7 @@
 # more complex example
 
 {
-    "version": "2015012801",
+    "version": "0.4",
     "timestamp": "2015-01-28T00:00:00Z",
     "ixp_list": [
       {
@@ -248,7 +248,7 @@
 
     "version": {
       "title": "IXP Member List Schema Version",
-      "description": "Version number of the schema",
+      "description": "Version number of the schema; this is not the version of the file within an IXP; but the schema version",
       "type": "string"
     },
 
