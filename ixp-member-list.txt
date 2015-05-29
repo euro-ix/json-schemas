@@ -251,7 +251,7 @@
 
     "version": {
       "title": "IXP Member List Schema Version",
-      "description": "Version number of the schema",
+      "description": "Version number of the schema; this is not the version of the file within an IXP; but the schema version",
       "type": "string"
     },
 
