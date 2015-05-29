@@ -5,7 +5,7 @@
 # Elisa Jasinska <elisa@bigwaveit.org>
 # Nick Hilliard <nick@inex.ie>
 #
-# version 0.5 - 02/17/15
+# version 0.5 - 05/29/15
 #
 #
 # revision history:
@@ -85,7 +85,7 @@
 # more complex example
 
 {
-    "version": "2015012801",
+    "version": "0.5",
     "timestamp": "2015-01-28T00:00:00Z",
     "ixp_list": [
       {
