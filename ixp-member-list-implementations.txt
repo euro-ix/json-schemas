@@ -8,3 +8,4 @@
 08. United IX
 09. DE-CIX (all IXPs)
 10. UAE-IX
+11. SIX
