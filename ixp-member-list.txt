@@ -179,7 +179,7 @@
                     "if_list": [
                         {
                             "switch_id": 0,
-                            "if_speed": 100000,
+                            "if_speed": 10000,
                             "if_type": "LR4"
                         }
                     ],
@@ -209,7 +209,7 @@
                     "if_list": [
                         {
                             "switch_id": 1,
-                            "if_speed": 100000,
+                            "if_speed": 10000,
                             "if_type": "LR4"
                         }
                     ],
@@ -274,7 +274,7 @@
           "properties": {
 
             "ixp_id": {
-              "description": "IXP numeric identifier",
+              "description": "IXP numeric identifier, persistent value free to set by the IXP",
               "type": "integer"
             },
             "shortname": {
@@ -519,7 +519,7 @@
                   "properties": {
 
                     "ixp_id": {
-                      "description": "IXP numeric identifier",
+                      "description": "IXP numeric identifier, persistent value free to set by the IXP, referencing the same ID as used in the ixp_list element",
                       "type": "integer"
                     },
                     "state": {
@@ -541,11 +541,11 @@
                           "properties": {
 
                             "switch_id": {
-                              "description": "Switch id where the interface or LAG is connected",
+                              "description": "Switch ID where the interface or LAG is connected, persistent value free to set by the IXP",
                               "type": "integer"
                             },
                             "if_speed": {
-                              "description": "Speed of the interface or LAG",
+                              "description": "Speed of the interface or LAG in kilobits, i.e. 10G = 10000",
                               "type": "integer"
                             },
                             "if_type": {
@@ -566,7 +566,7 @@
                           "properties": {
 
                             "vlan_id": {
-                              "description": "The VLAN ID this connection is placed in",
+                              "description": "The VLAN ID this connection is placed in, persistent value free to set by the IXP",
                               "type": "integer"
                             },
                             "mac_address": {
