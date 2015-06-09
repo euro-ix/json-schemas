@@ -545,7 +545,7 @@
                               "type": "integer"
                             },
                             "if_speed": {
-                              "description": "Speed of the interface or LAG in kilobits, i.e. 10G = 10000",
+                              "description": "Speed of the interface or LAG in Mb, i.e. 10G = 10000",
                               "type": "integer"
                             },
                             "if_type": {
