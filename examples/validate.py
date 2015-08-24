@@ -14,5 +14,5 @@ schema_url = "https://raw.githubusercontent.com/euro-ix/json-schemas/master/ixp-
 schema = json.loads(urllib.urlopen(schema_url).read())
 ixp_data = json.loads(urllib.urlopen(url).read())
 
-jsonschema.validate(schema, ixp_data)
+jsonschema.validate(ixp_data, schema)
 
