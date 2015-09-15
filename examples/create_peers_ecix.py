@@ -12,6 +12,6 @@ for member in ixp_data['member_list']:
     for vlan in connection['vlan_list']:
       if 'ipv4' in vlan:
         print '-----'
-        print 'neighbor '+vlan['ipv4']['address']+' remote-as '+member['asnum']
+        print 'neighbor '+vlan['ipv4']['address']+' remote-as '+ str(member['asnum'])
         print 'neighbor '+vlan['ipv4']['address']+' description PEER::'+member['name']
 
