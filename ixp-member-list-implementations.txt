@@ -10,3 +10,4 @@
 10. UAE-IX
 11. SIX
 12. SwissIX
+13. GR-IX
