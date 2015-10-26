@@ -1,0 +1,78 @@
+#######################################################################
+# IX Statistics Export Schema
+#
+# Nick Hilliard <nick@inex.ie>
+#
+# version 0.1 - 2015-10-26
+#
+# revision history:
+#
+# v 0.1 * initial release
+#######################################################################
+# basic example
+
+{
+    "version": "0.1",
+    "timestamp": "2015-01-28T00:00:00Z",
+    "ixp_id": 20,
+    "interval": 300,
+    "vlan": [
+        {
+            "vlan_id": 3,
+            "traffic": [
+                {
+                    "direction": "in",
+                    "bytes": 457349582703
+                },
+                {
+                    "direction": "out",
+                    "bytes": 456239582692
+                }
+            ]
+        }
+    ]
+}
+
+# complete example
+
+{
+    "version": "0.1",
+    "timestamp": "2015-01-28T00:00:00Z",
+    "ixp_id": 20,
+    "interval": 300,
+    "source": "snmp",
+    "vlan": [
+        {
+            "vlan_id": 3,
+            "traffic": [
+                {
+                uu    "direction": "in",
+                    "bytes": 457349582703,
+                    "packets": 350693814
+                },
+                {
+                    "direction": "out",
+                    "bytes": 456239582692,
+                    "packets": 350693814
+                }
+            ],
+            "member_list": [
+                {
+                    "member_id": 345,
+                    "traffic": [
+                        {
+                            "direction": "in",
+                            "bytes": 457349582703,
+                            "packets": 350693814
+                        },
+                        {
+                            "direction": "out",
+                            "bytes": 456239582692,
+                            "packets": 350693814
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

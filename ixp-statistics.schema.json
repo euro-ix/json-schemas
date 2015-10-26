@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "IXP Statistics Export Schema",
+  "description": "A JSON schema representing IXP statistics",
+  "type": "object",
+  "required": ["version", "timestamp", "ixp_id", "interval", "vlan"],
+  "properties": {
+
+    "version": {
+      "title": "IXP Statistics Schema Version",
+      "description": "Version number of the schema; this is the schema version, not the version of the file within the IXP",
+      "type": "string"
+    },
+
+    "ixp_id": {
+      "description": "The IXP's ID, as defined in the member list export schema",
+      "type": "integer"
+    },
+
+    "interval": {
+      "description": "The time interval used for sampling the statistics presented",
+      "type": "integer"
+    },
+
+    "source": {
+      "description": "The source of the statistics",
+      "type": "string",
+      "enum": ["snmp", "netflow", "ipfix", "sflow", "rmon", "other"]
+    },
+
+    "timestamp": {
+      "title": "IXP statistics schema export timestamp",
+      "description": "UTC timestamp for when the data was exported",
+      "type": "string",
+      "format": "date-time"
+    },
+
+
+    "vlan": {
+      "title": "IXP traffic statistics vlan entry",
+      "description": "A list of schemas presenting IXP traffic statistics per vlan",
+      "type": "array",
+      "items": {
+        "description": "A vlan array object",
+        "type": "object",
+        "required": ["vlan_id","traffic"],
+
+        "properties": {
+          "vlan_id": {
+            "description": "The ID of the VLAN, as described in the IXP Member List schema",
+            "type": "integer"
+          },
+
+          "traffic": {
+            "title": "IXP traffic statistics",
+            "description": "A list of schemas presenting IXP traffic statistics",
+            "type": "array",
+            "items": {
+              "description": "A traffic array object",
+              "type": "object",
+              "required": ["direction","bytes"],
+
+              "properties": {
+                "direction": {
+                  "description": "The direction of the traffic",
+                  "type": "string",
+                  "enum": ["in", "out"]
+                },
+                "bytes": {
+                    "description": "The octet count of this object",
+                    "type": "integer"
+                },
+                "packets": {
+                    "description": "The packet count of this object",
+                    "type": "integer"
+                }
+              }
+            },
+            "member_list": {
+              "title": "IXP traffic statistics",
+              "description": "A list of schemas presenting IXP traffic statistics",
+              "type": "array",
+              "items": {
+                "description": "A traffic array object",
+                "type": "object",
+                "required": ["member_id","traffic"],
+
+                "properties": {
+                  "member_id": {
+                    "description": "The IXP participant's ID, as defined in the member list export schema",
+                    "type": "integer"
+                  },
+                  "traffic": {
+                    "title": "IXP traffic statistics",
+                    "description": "A list of schemas presenting IXP traffic statistics",
+                    "type": "array",
+                    "items": {
+                      "description": "A traffic array object",
+                      "type": "object",
+                      "required": ["direction","bytes"],
+
+                      "properties": {
+                        "direction": {
+                          "description": "The direction of the traffic",
+                          "type": "string",
+                          "enum": ["in", "out"]
+                        },
+                        "bytes": {
+                            "description": "The octet count of this object",
+                            "type": "integer"
+                        },
+                        "packets": {
+                            "description": "The packet count of this object",
+                            "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
