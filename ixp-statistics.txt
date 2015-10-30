@@ -46,7 +46,7 @@
             "vlan_id": 3,
             "traffic": [
                 {
-                uu    "direction": "in",
+                    "direction": "in",
                     "bytes": 457349582703,
                     "packets": 350693814
                 },
