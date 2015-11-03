@@ -14,20 +14,20 @@ More detailed documentation is available on the [github wiki page](https://githu
 
 ## Implementations
 01. INEX
-02. ECIX
+02. ECIX ([BER](https://www.ecix.net/memberlist_BER.json), [DUS](https://www.ecix.net/memberlist_DUS.json), [FRA](https://www.ecix.net/memberlist_FRA.json), [HAM](https://www.ecix.net/memberlist_HAM.json))
 03. BCIX
 04. NAPAfrica
-05. AMS-IX
+05. [AMS-IX](https://my.ams-ix.net/api/v1/members.json)
 06. FL-IX
 07. LONAP
 08. United IX
-09. DE-CIX (all IXPs)
-10. UAE-IX
-11. SIX
+09. DE-CIX ([FRA](https://www.de-cix.net/customers-partners/customers/de-cix-frankfurt/public-customer-list-in-json-format-fra/), [HAM](https://www.de-cix.net/customers-partners/customers/de-cix-hamburg/public-customer-list-in-json-format-ham/), [MUC](https://www.de-cix.net/customers-partners/customers/de-cix-munich/public-customer-list-in-json-format-muc/), [NYC](https://nyc.de-cix.net/customers-partners/customers/public-customer-list-in-json-format-nyc/))
+10. [UAE-IX](http://www.uae-ix.net/customers-partners/customers/public-customer-list-in-json-format-dxb/)
+11. [SIX](https://www.seattleix.net/autogen/participants.json)
 12. SwissIX
 13. GR-IX
 14. TREX
-15. SFMIX
+15. [SFMIX]( http://sfmix.org/participants.json)
 
 ## Contact
 Please send feedback to: 
