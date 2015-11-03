@@ -27,7 +27,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 12. SwissIX
 13. GR-IX
 14. TREX
-15. [SFMIX]( http://sfmix.org/participants.json)
+15. [SFMIX](http://sfmix.org/participants.json)
 
 ## Contact
 Please send feedback to: 
