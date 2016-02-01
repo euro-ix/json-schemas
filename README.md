@@ -26,7 +26,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 11. [SIX](https://www.seattleix.net/autogen/participants.json)
 12. SwissIX
 13. GR-IX
-14. TREX
+14. [TREX](http://www.trex.fi/memberlist.json)
 15. [SFMIX](http://sfmix.org/participants.json)
 
 ## Contact
