@@ -25,7 +25,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 10. [UAE-IX](http://www.uae-ix.net/customers-partners/customers/public-customer-list-in-json-format-dxb/)
 11. [SIX](https://www.seattleix.net/autogen/participants.json)
 12. SwissIX
-13. GR-IX
+13. [GR-IX](https://www.gr-ix.gr/participants.json)
 14. [TREX](http://www.trex.fi/memberlist.json)
 15. [SFMIX](http://sfmix.org/participants.json)
 16. [RIX](http://rix.is/participants.json)
