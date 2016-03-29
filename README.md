@@ -29,6 +29,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 14. [TREX](http://www.trex.fi/memberlist.json)
 15. [SFMIX](http://sfmix.org/participants.json)
 16. [RIX](http://rix.is/participants.json)
+17. [Telx](https://tie.telx.com/stats/members.json)
 
 ## Contact
 Please send feedback to: 
