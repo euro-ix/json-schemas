@@ -311,7 +311,7 @@
                             }
                           }
                         }
-                      
+
 
                     },
                     "vlan_list": {
@@ -325,10 +325,6 @@
                             "vlan_id": {
                               "description": "The VLAN ID this connection is placed in, persistent value free to set by the IXP",
                               "type": "integer"
-                            },
-                            "mac_address": {
-                              "description": "MAC address of the member interface",
-                              "type": "string"
                             },
                             "ipv4": {
                               "description": "The network's IPv4 address details in this VLAN",
@@ -351,6 +347,13 @@
                                 "routeserver": {
                                   "description": "Does this IPv4 address connect to the IXP routeserver",
                                   "type": "boolean"
+                                },
+                                "mac_addresses": {
+                                  "description": "MAC address of the member interface (format: lowercase string xx:xx:xx:xx:xx:xx)",
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
                                 }
                               }
                             },
@@ -375,21 +378,28 @@
                                 "routeserver": {
                                   "description": "Does this IPv6 address connect to the IXP routeserver",
                                   "type": "boolean"
+                                },
+                                "mac_addresses": {
+                                  "description": "MAC address of the member interface (format: lowercase string xx:xx:xx:xx:xx:xx)",
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
                                 }
                               }
                             }
                           }
                         }
-                      
+
 
                     }
                   }
                 }
-              
+
             }
           }
         }
-      
+
     }
   }
 }
