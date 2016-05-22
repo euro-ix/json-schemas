@@ -13,7 +13,7 @@ It is suggested to locate the REST call under a well defined URI on the IXP's we
 More detailed documentation is available on the [github wiki page](https://github.com/euro-ix/json-schemas/wiki).
 
 ## Implementations
-01. INEX
+01. [INEX](https://www.inex.ie/ixp/apiv1/member-list/list )
 02. ECIX ([BER](https://www.ecix.net/memberlist_BER.json), [DUS](https://www.ecix.net/memberlist_DUS.json), [FRA](https://www.ecix.net/memberlist_FRA.json), [HAM](https://www.ecix.net/memberlist_HAM.json))
 03. BCIX
 04. NAPAfrica
