@@ -21,7 +21,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 06. FL-IX
 07. LONAP
 08. United IX
-09. DE-CIX ([FRA](https://www.de-cix.net/customers-partners/customers/de-cix-frankfurt/public-customer-list-in-json-format-fra/), [HAM](https://www.de-cix.net/customers-partners/customers/de-cix-hamburg/public-customer-list-in-json-format-ham/), [MUC](https://www.de-cix.net/customers-partners/customers/de-cix-munich/public-customer-list-in-json-format-muc/), [NYC](https://nyc.de-cix.net/customers-partners/customers/public-customer-list-in-json-format-nyc/))
+09. DE-CIX
 10. [UAE-IX](http://www.uae-ix.net/customers-partners/customers/public-customer-list-in-json-format-dxb/)
 11. [SIX](https://www.seattleix.net/autogen/participants.json)
 12. SwissIX
