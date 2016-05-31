@@ -14,7 +14,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 
 ## Implementations
 01. [INEX](https://www.inex.ie/ixp/apiv1/member-list/list )
-02. ECIX ([BER](https://www.ecix.net/memberlist_BER.json), [DUS](https://www.ecix.net/memberlist_DUS.json), [FRA](https://www.ecix.net/memberlist_FRA.json), [HAM](https://www.ecix.net/memberlist_HAM.json))
+02. ECIX ([BER](https://www.ecix.net/memberlist_BER.json), [DUS](https://www.ecix.net/memberlist_DUS.json), [FRA](https://www.ecix.net/memberlist_FRA.json), [HAM](https://www.ecix.net/memberlist_HAM.json), [MUC](https://www.ecix.net/memberlist_MUC.json))
 03. BCIX
 04. NAPAfrica
 05. [AMS-IX](https://my.ams-ix.net/api/v1/members.json)
