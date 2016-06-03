@@ -19,7 +19,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 04. NAPAfrica
 05. [AMS-IX](https://my.ams-ix.net/api/v1/members.json)
 06. FL-IX
-07. LONAP
+07. [LONAP](https://portal.lonap.net/apiv1/member-list/list)
 08. United IX
 09. DE-CIX
 10. [UAE-IX](http://www.uae-ix.net/customers-partners/customers/public-customer-list-in-json-format-dxb/)
@@ -30,6 +30,8 @@ More detailed documentation is available on the [github wiki page](https://githu
 15. [SFMIX](http://sfmix.org/participants.json)
 16. [RIX](http://rix.is/participants.json)
 17. [Telx](https://tie.telx.com/stats/members.json)
+18. [CATNIX](http://www.catnix.net/participants.json)
+19. [Megaport](https://lg.megaport.com/megaport.json)
 
 ## Contact
 Please send feedback to: 
