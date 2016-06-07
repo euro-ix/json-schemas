@@ -34,6 +34,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 19. [Megaport](https://lg.megaport.com/megaport.json)
 20. [NIX.CZ](http://www.nix.cz/networks.json)
 21. [NIX.SK](http://www.nix.sk/networks.json)
+22. [Gigapix](http://square.gigapix.pt/participants.json)
 
 ## Contact
 Please send feedback to: 
