@@ -32,6 +32,8 @@ More detailed documentation is available on the [github wiki page](https://githu
 17. [Telx](https://tie.telx.com/stats/members.json)
 18. [CATNIX](http://www.catnix.net/participants.json)
 19. [Megaport](https://lg.megaport.com/megaport.json)
+20. [NIX.CZ](http://www.nix.cz/networks.json)
+21. [NIX.SK](http://www.nix.sk/networks.json)
 
 ## Contact
 Please send feedback to: 
