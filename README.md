@@ -35,6 +35,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 20. [NIX.CZ](http://www.nix.cz/networks.json)
 21. [NIX.SK](http://www.nix.sk/networks.json)
 22. [Gigapix](http://square.gigapix.pt/participants.json)
+23. FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json))
 
 ## Contact
 Please send feedback to: 
