@@ -4,6 +4,8 @@ import sys
 import argparse
 import requests
 import jsonschema
+import re
+import json
 
 
 def parse_args(args):
@@ -43,18 +45,24 @@ def main(argv=sys.argv[1:]):
     response = requests.get(schema_url)
     schema = response.json()
 
-    if args.username and args.password:
-        response = requests.get(
-            args.url,
-            auth=(
-                args.username,
-                args.password
-            )
-        )
+    # Special case for "file://" URL (not handled by "requests")
+    match = re.search('^file://(.*)$', args.url)
+    if match:
+        ixp_data = json.loads(open(match.group(1), 'r').read())
     else:
-        response = requests.get(args.url)
+        if args.username and args.password:
+            response = requests.get(
+                args.url,
+                auth=(
+                    args.username,
+                    args.password
+                )
+            )
+        else:
+            response = requests.get(args.url)
 
-    ixp_data = response.json()
+        ixp_data = response.json()
+
     jsonschema.validate(ixp_data, schema)
 
 
