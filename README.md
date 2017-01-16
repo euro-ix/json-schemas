@@ -37,6 +37,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 22. [Gigapix](http://square.gigapix.pt/participants.json)
 23. FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json))
 23. [VIX](https://www.vix.at/participants.json)
+24. [MIX Milan](http://www.mix-it.net/participants.json)
 
 ## Contact
 Please send feedback to: 
