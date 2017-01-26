@@ -22,7 +22,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 07. [LONAP](https://portal.lonap.net/apiv1/member-list/list)
 08. United IX
 09. DE-CIX
-10. [UAE-IX](http://www.uae-ix.net/customers-partners/customers/public-customer-list-in-json-format-dxb/)
+10. UAE-IX
 11. [SIX](https://www.seattleix.net/autogen/participants.json)
 12. SwissIX
 13. [GR-IX](https://www.gr-ix.gr/participants.json)
