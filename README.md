@@ -38,6 +38,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 23. FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json))
 23. [VIX](https://www.vix.at/participants.json)
 24. [MIX Milan](http://www.mix-it.net/participants.json)
+25. [LINX](https://www.linx.net/members.json)
 
 ## Contact
 Please send feedback to: 
