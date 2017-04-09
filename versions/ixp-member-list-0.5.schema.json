@@ -1,0 +1,395 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "IXP Member List Schema",
+  "description": "A JSON schema representing an IXP Member List",
+  "type": "object",
+  "required": ["version", "timestamp", "ixp_list", "member_list"],
+  "properties": {
+
+    "version": {
+      "title": "IXP Member List Schema Version",
+      "description": "Version number of the schema; this is not the version of the file within an IXP; but the schema version",
+      "type": "string"
+    },
+
+    "timestamp": {
+      "title": "IXP Member List Schema export timestamp",
+      "description": "Timestamp of when the data was exported",
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "ixp_list": {
+      "title": "IXP Info List",
+      "description": "A list of schemas representing IXP information",
+      "type": "array",
+      "items":
+        {
+          "description": "A single IXP entry",
+          "type": "object",
+          "required": ["ixp_id","shortname"],
+          "properties": {
+
+            "ixp_id": {
+              "description": "IXP numeric identifier",
+              "type": "integer"
+            },
+            "shortname": {
+              "description": "Short name of the IXP",
+              "type": "string"
+            },
+            "name": {
+              "description": "Name of the IXP",
+              "type": "string"
+            },
+            "url": {
+              "description": "Website of the IXP",
+              "type": "string",
+              "format": "uri"
+            },
+            "stats_api": {
+              "description": "URL to statistics API",
+              "type": "string",
+              "format": "uri"
+            },
+            "country": {
+              "description": "ISO country code where the IXP is located",
+              "type": "string"
+            },
+            "ixf_id": {
+              "description": "IXP ID from the IX-F database",
+              "type": "integer"
+            },
+            "support_email": {
+              "description": "Support email address",
+              "type": "string",
+              "format" : "email"
+            },
+            "support_phone": {
+              "description": "Support phone number",
+              "type": "string"
+            },
+            "support_contact_hours": {
+              "description": "Support contact hours, eg. 24/7, 8/5, etc",
+              "type": "string"
+            },
+            "emergency_email": {
+              "description": "Emergency support email address",
+              "type": "string",
+              "format" : "email"
+            },
+            "emergency_phone": {
+              "description": "Emergency support phone number",
+              "type": "string"
+            },
+            "emergency_contact_hours": {
+              "description": "Emergency support contact hours, eg. 24/7, 8/5, etc",
+              "type": "string"
+            },
+            "billing_email": {
+              "description": "Billing email address",
+              "type": "string",
+              "format" : "email"
+            },
+            "billing_phone": {
+              "description": "Billing phone number",
+              "type": "string"
+            },
+            "billing_contact_hours": {
+              "description": "Billing contact hours, eg. 24/7, 8/5, etc",
+              "type": "string"
+            },
+            "peering_policy_list": {
+              "description": "Peering policy choices available in the member list",
+              "type": "array",
+              "items":
+                {
+                  "type": "string"
+                }
+            },
+
+            "switch": {
+              "description": "Switches available at the IXP",
+              "type": "array",
+              "items":
+                {
+                  "type": "object",
+                  "properties": {
+
+                    "id": {
+                      "description": "Unique ID of the switch",
+                      "type": "integer"
+                    },
+                    "name": {
+                      "description": "Switch name",
+                      "type": "string"
+                    },
+                    "colo": {
+                      "description": "Colo the switch is located in",
+                      "type": "string"
+                    },
+                    "pdb_facility_id": {
+                      "description": "Peering DB ID of the data centre",
+                      "type": "integer"
+                    },
+                    "city": {
+                      "description": "City the switch is located in",
+                      "type": "string"
+                    },
+                    "country": {
+                      "description": "Country the switch is located in",
+                      "type": "string"
+                    }
+                  }
+                }
+            },
+
+            "vlan": {
+              "description": "VLANs available at the IXP",
+              "type": "array",
+              "items":
+                {
+                  "description": "A single VLAN entry",
+                  "type": "object",
+                  "properties": {
+
+                    "id": {
+                      "description": "Unique ID of the VLAN",
+                      "type": "integer"
+                    },
+                    "name": {
+                      "description": "VLAN name",
+                      "type": "string"
+                    },
+                    "ipv4": {
+                      "description": "IPv4 details in this VLAN",
+                      "type": "object",
+                      "properties": {
+
+                        "prefix": {
+                          "description": "Prefix of the IPv4 address",
+                          "type": "string",
+                          "format": "ipv4"
+                        },
+                        "mask_length": {
+                          "description": "Mask length of the IPv4 address",
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "ipv6": {
+                      "description": "IPv6 details in this VLAN",
+                      "type": "object",
+                      "properties": {
+
+                        "prefix": {
+                          "description": "Prefix of the IPv6 address",
+                          "type": "string",
+                          "format": "ipv6"
+                        },
+                        "mask_length": {
+                          "description": "Mask length of the IPv6 address",
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+            }
+          }
+        }
+    },
+
+    "member_list": {
+      "title": "IXP Member List",
+      "description": "A list of schemas representing IXP members",
+      "type": "array",
+      "items":
+        {
+          "description": "A single member entry",
+          "type": "object",
+          "required": ["asnum","connection_list"],
+          "properties": {
+
+            "asnum": {
+              "description": "AS number of the network",
+              "type": "integer"
+            },
+            "member_type": {
+              "description": "Participant type: peering, ixp, pro bono, routeserver or other",
+              "type": "string",
+              "enum": ["peering","ixp","routeserver","probono","other"]
+            },
+            "name": {
+              "description": "Name of the network",
+              "type": "string"
+            },
+            "url": {
+              "description": "URL to website of the network",
+              "type": "string",
+              "format": "uri"
+            },
+            "peering_policy": {
+              "description": "Peering policy of the network",
+              "type": "string"
+            },
+            "peering_policy_url": {
+              "description": "URL to the network's peering policy",
+              "type": "string",
+              "format": "uri"
+            },
+            "member_since": {
+              "description": "Date when the network joined the IXP",
+              "type": "string",
+              "format": "date-time"
+            },
+            "contact_email": {
+              "description": "List of contact email addresses of the network",
+              "type": "array",
+              "items":
+                {
+                  "type": "string",
+                  "format" : "email"
+                }
+            },
+            "contact_phone": {
+              "description": "List of contact phone numbers of the network",
+              "type": "array",
+              "items":
+                {
+                  "type": "string"
+                }
+            },
+            "contact_hours": {
+              "description": "Network contact hours, eg. 24/7, 8/5, etc",
+              "type": "string"
+            },
+
+            "connection_list": {
+              "description": "List of connections of the network at the IXP",
+              "type": "array",
+              "items":
+                {
+                  "description": "A single connection entry",
+                  "type": "object",
+                  "required": ["ixp_id"],
+                  "properties": {
+
+                    "ixp_id": {
+                      "description": "IXP numeric identifier",
+                      "type": "integer"
+                    },
+                    "state": {
+                      "description": "State of the connection",
+                      "type": "string"
+                    },
+                    "connected_since": {
+                      "description": "Date when the connection was activated",
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "if_list": {
+                      "description": "List of interfaces making up the connection",
+                      "type": "array",
+                      "items":
+                        {
+                          "description": "A single interface entry",
+                          "type": "object",
+                          "properties": {
+
+                            "switch_id": {
+                              "description": "Switch id where the interface or LAG is connected",
+                              "type": "integer"
+                            },
+                            "if_speed": {
+                              "description": "Speed of the interface or LAG",
+                              "type": "integer"
+                            },
+                            "if_type": {
+                              "description": "Type of the interface or LAG",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      
+
+                    },
+                    "vlan_list": {
+                      "type": "array",
+                      "items":
+                        {
+                          "description": "A single VLAN entry",
+                          "type": "object",
+                          "properties": {
+
+                            "vlan_id": {
+                              "description": "The VLAN ID this connection is placed in",
+                              "type": "integer"
+                            },
+                            "mac_address": {
+                              "description": "MAC address of the member interface",
+                              "type": "string"
+                            },
+                            "ipv4": {
+                              "description": "The network's IPv4 address details in this VLAN",
+                              "type": "object",
+                              "properties": {
+
+                                "address": {
+                                  "description": "The IPv4 address",
+                                  "type": "string",
+                                  "format": "ipv4"
+                                },
+                                "as_macro": {
+                                  "description": "The IPv4 AS-MACRO, if applicable",
+                                  "type": "string"
+                                },
+                                "max_prefix": {
+                                  "description": "The max number of prefixes on this connection for IPv4",
+                                  "type": "integer"
+                                },
+                                "routeserver": {
+                                  "description": "Does this IPv4 address connect to the IXP routeserver",
+                                  "type": "boolean"
+                                }
+                              }
+                            },
+                            "ipv6": {
+                              "description": "The network's IPv6 address details in this VLAN",
+                              "type": "object",
+                              "properties": {
+
+                                "address": {
+                                  "description": "The IPv6 address",
+                                  "type": "string",
+                                  "format": "ipv6"
+                                },
+                                "as_macro": {
+                                  "description": "The IPv6 AS-MACRO, if applicable",
+                                  "type": "string"
+                                },
+                                "max_prefix": {
+                                  "description": "The max number of prefixes on this connection for IPv6",
+                                  "type": "integer"
+                                },
+                                "routeserver": {
+                                  "description": "Does this IPv6 address connect to the IXP routeserver",
+                                  "type": "boolean"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      
+
+                    }
+                  }
+                }
+              
+            }
+          }
+        }
+      
+    }
+  }
+}

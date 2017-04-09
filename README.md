@@ -1,18 +1,28 @@
-IX Member List JSON Schema
-===========
+IX-F Member Export JSON Schema
+================================
 
-A JSON schema for IXP member lists
+The IX-F Member Export is an agreed and standardized JSON schema which allows IXPs to make their member lists available for consumption by tools such as PeeringDB, networks with automated peering managers, prospective members and the many other tools appearing in the peering eco-system.
 
-## About
-Most IXP’s enable their members to fetch a list of the connected members in various formats. The Euro-IX community is working on a portable JSON output format for member lists on IXP websites.
+The key element of the IX-F Member Export is that it makes the individual IXP the canonical trusted source for data about their own IXP. Data that is guaranteed to be correct and up to date.
+
 
 ## Location
-It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: http://www.example.com/participants.json
+
+It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: `http://www.example.com/participants.json`.
 
 ## Documentation
+
 More detailed documentation is available on the [github wiki page](https://github.com/euro-ix/json-schemas/wiki).
 
+## Directory
+
+In April 2017, we launched a directory for all implemented IX-F member exports. You can find it at: http://ml.ix-f.net/.
+
 ## Implementations
+
+**POTENTIALLY STALE - THE ABOVE REFERENCED DIRECTORY WILL BE USED FROM HERE ON IN **
+
+
  1. [INEX](https://www.inex.ie/ixp/apiv1/member-list/list )
  1. ECIX ([BER](https://www.ecix.net/memberlist_BER.json), [DUS](https://www.ecix.net/memberlist_DUS.json), [FRA](https://www.ecix.net/memberlist_FRA.json), [HAM](https://www.ecix.net/memberlist_HAM.json), [MUC](https://www.ecix.net/memberlist_MUC.json))
  1. BCIX
@@ -39,6 +49,9 @@ More detailed documentation is available on the [github wiki page](https://githu
  1. [LINX](https://www.linx.net/members.json)
 
 ## Contact
+
 Please send feedback to:
+
+* Barry O'Donovan <barry.odonovan@inex.ie>
 * Elisa Jasinska <elisa@bigwaveit.org>
 * Nick Hilliard <nick@inex.ie>
