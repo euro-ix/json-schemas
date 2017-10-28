@@ -195,7 +195,7 @@
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V4",
-                                "mac_address" : [
+                                "mac_addresses" : [
                                     "00:0a:95:9d:68:16"
                                 ]
                             },
@@ -204,7 +204,7 @@
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V6",
-                                "mac_address" : [
+                                "mac_addresses" : [
                                     "00:0a:95:9d:68:16"
                                 ]
                             }
@@ -230,7 +230,7 @@
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V4",
-                                "mac_address" : [
+                                "mac_addresses" : [
                                     "00:0a:95:9d:68:16"
                                 ]
                             },
@@ -239,7 +239,7 @@
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V6",
-                                "mac_address" : [
+                                "mac_addresses" : [
                                     "00:0a:95:9d:68:16"
                                 ]
                             }
