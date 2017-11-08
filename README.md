@@ -14,39 +14,17 @@ It is suggested to locate the REST call under a well defined URI on the IXP's we
 
 More detailed documentation is available on the [github wiki page](https://github.com/euro-ix/json-schemas/wiki).
 
-## Directory
+## Directory / Implementations
 
-In April 2017, we launched a directory for all implemented IX-F member exports. You can find it at: http://ml.ix-f.net/.
+In April 2017, we launched a directory for all implemented IX-F member exports. You can find it at: https://ml.ix-f.net/.
 
-## Implementations
+### Stale / Potentially Broken Implementations 
 
-**POTENTIALLY STALE - THE ABOVE REFERENCED DIRECTORY WILL BE USED FROM HERE ON IN **
+**POTENTIALLY STALE/BROKEN - THE ABOVE REFERENCED DIRECTORY WILL BE USED FROM HERE ON IN **
 
+The following have/had implementations but have not yet added themselves to the directory above.
 
- 1. [INEX](https://www.inex.ie/ixp/apiv1/member-list/list )
- 1. ECIX ([BER](https://www.ecix.net/memberlist_BER.json), [DUS](https://www.ecix.net/memberlist_DUS.json), [FRA](https://www.ecix.net/memberlist_FRA.json), [HAM](https://www.ecix.net/memberlist_HAM.json), [MUC](https://www.ecix.net/memberlist_MUC.json))
- 1. BCIX
- 1. NAPAfrica
- 1. [AMS-IX](https://my.ams-ix.net/api/v1/members.json)
- 1. FL-IX
- 1. [LONAP](https://portal.lonap.net/apiv1/member-list/list)
- 1. United IX
- 1. [SIX](https://www.seattleix.net/autogen/participants.json)
- 1. SwissIX
- 1. [GR-IX](https://www.gr-ix.gr/participants.json)
- 1. [TREX](http://www.trex.fi/memberlist.json)
- 1. [SFMIX](http://sfmix.org/participants.json)
- 1. [RIX](http://rix.is/participants.json)
- 1. [Telx](https://tie.telx.com/stats/members.json)
- 1. [CATNIX](http://www.catnix.net/participants.json)
- 1. [Megaport](https://lg.megaport.com/megaport.json)
- 1. [NIX.CZ](http://www.nix.cz/networks.json)
- 1. [NIX.SK](http://www.nix.sk/networks.json)
- 1. [Gigapix](http://square.gigapix.pt/participants.json)
- 1. FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json))
- 1. [VIX](https://www.vix.at/participants.json)
- 1. [MIX Milan](http://www.mix-it.net/participants.json)
- 1. [LINX](https://www.linx.net/members.json)
+NAPAfricam, FL-IX, United IX, [TREX](http://www.trex.fi/memberlist.json), [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), [Telx](https://tie.telx.com/stats/members.json), [CATNIX](http://www.catnix.net/participants.json), [Gigapix](http://square.gigapix.pt/participants.json), FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)), [MIX Milan](http://www.mix-it.net/participants.json), [LINX](https://www.linx.net/members.json).
 
 ## Contact
 
