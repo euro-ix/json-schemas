@@ -24,7 +24,7 @@ In April 2017, we launched a directory for all implemented IX-F member exports. 
 
 The following have/had implementations but have not yet added themselves to the directory above.
 
-NAPAfricam, FL-IX, United IX, [TREX](http://www.trex.fi/memberlist.json), [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), [Telx](https://tie.telx.com/stats/members.json), [CATNIX](http://www.catnix.net/participants.json), [Gigapix](http://square.gigapix.pt/participants.json), FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)), [MIX Milan](http://www.mix-it.net/participants.json), [LINX](https://www.linx.net/members.json).
+NAPAfricam, FL-IX, United IX, [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), [Telx](https://tie.telx.com/stats/members.json), [CATNIX](http://www.catnix.net/participants.json), [Gigapix](http://square.gigapix.pt/participants.json), FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)), [MIX Milan](http://www.mix-it.net/participants.json), [LINX](https://www.linx.net/members.json).
 
 ## Contact
 
