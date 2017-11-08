@@ -20,7 +20,7 @@ In April 2017, we launched a directory for all implemented IX-F member exports. 
 
 ### Stale / Potentially Broken Implementations 
 
-**POTENTIALLY STALE/BROKEN - THE ABOVE REFERENCED DIRECTORY WILL BE USED FROM HERE ON IN **
+**POTENTIALLY STALE/BROKEN - THE ABOVE REFERENCED DIRECTORY WILL BE USED FROM HERE ON IN**
 
 The following have/had implementations but have not yet added themselves to the directory above.
 
