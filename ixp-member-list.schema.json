@@ -340,6 +340,10 @@
                                   "description": "The IPv4 AS-MACRO, if applicable",
                                   "type": "string"
                                 },
+                                "as_macro_source": {
+                                  "description": "The IPv4 AS-MACRO IRR, if applicable",
+                                  "type": "string"
+                                },
                                 "max_prefix": {
                                   "description": "The max number of prefixes on this connection for IPv4",
                                   "type": "integer"
@@ -369,6 +373,10 @@
                                 },
                                 "as_macro": {
                                   "description": "The IPv6 AS-MACRO, if applicable",
+                                  "type": "string"
+                                },
+                                "as_macro_source": {
+                                  "description": "The IPv6 AS-MACRO IRR, if applicable",
                                   "type": "string"
                                 },
                                 "max_prefix": {
