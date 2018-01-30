@@ -40,6 +40,7 @@
 #       + add: switch manufacturer and model (strings, not required)
 #       + add: looking_glass_urls (array of strings, not required) to vlan ipv4/6
 #       + add: service_type (array of strings, not required) to member connection
+#       - remove: types probono and routeserver from member_list.member_type
 
 
 

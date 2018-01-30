@@ -246,7 +246,7 @@
             "member_type": {
               "description": "Participant type: peering, ixp, pro bono, routeserver or other",
               "type": "string",
-              "enum": ["peering","ixp","routeserver","probono","other"]
+              "enum": ["peering","ixp","other"]
             },
             "name": {
               "description": "Name of the network",
