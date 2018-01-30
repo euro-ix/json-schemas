@@ -33,18 +33,27 @@
 #       + allow multiple MACs per address family and list macs
 #         by address family as some IXPs allow different L3 interfaces
 #         for v4/v6
+# v 0.7 * added new fields following ix-f/euro-ix meeting in London, UK
+#         on Jan 10th. Fields include:
+#       + add: ixf_id: (integer, required) (closes #21)
+#       + add: peeringdb_id: (integer, not required)
+#       + add: switch manufacturer and model (strings, not required)
+#       + add: looking_glass_urls (array of strings, not required) to vlan ipv4/6
+#       + add: service_type (array of strings, not required) to member connection
+
 
 
 #######################################################################
 # basic example
 
 {
-    "version": "0.6",
-    "timestamp": "2016-01-22T00:00:00Z",
+    "version": "0.7",
+    "timestamp": "2017-01-30T00:00:00Z",
     "ixp_list": [
        {
           "ixp_id": 42,
-          "shortname": "AMS-IX"
+          "shortname": "AMS-IX",
+          "ixf_id": 2
         }
     ],
     "member_list": [
@@ -89,14 +98,15 @@
 # more complex example
 
 {
-    "version": "0.6",
-    "timestamp": "2016-01-22T00:00:00Z",
+    "version": "0.7",
+    "timestamp": "2017-01-30T00:00:00Z",
     "ixp_list": [
       {
         "shortname": "AMS-IX",
         "name": "Amsterdam Internet Exchange",
         "ixp_id": 42,
         "ixf_id": 2,
+        "peeringdb_id": 26,
         "country": "NL",
         "url": "http://www.ams-ix.net/",
         "stats_api": "https://my.ams-ix.net/api/v1/stats.json",
@@ -123,7 +133,9 @@
                 "colo": "Telecity 5",
                 "pdb_facility_id": 1236,
                 "city": "Amsterdam",
-                "country": "NL"
+                "country": "NL",
+                "manufacturer": "Acme Switch Co.",
+                "model": "Big Switch"
             },
             {
                 "id": 1,
