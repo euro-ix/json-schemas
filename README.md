@@ -8,7 +8,7 @@ The key element of the IX-F Member Export is that it makes the individual IXP th
 
 ## Location
 
-It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: `http://www.example.com/participants.json`.https://ml.ix-f.net/
+It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: `http://www.example.com/participants.json
 
 ## Documentation
 
