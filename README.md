@@ -8,7 +8,7 @@ The key element of the IX-F Member Export is that it makes the individual IXP th
 
 ## Location
 
-It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: `http://www.example.com/participants.json`.
+It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: `http://www.example.com/participants.json`.https://ml.ix-f.net/
 
 ## Documentation
 
@@ -16,7 +16,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 
 ## Directory / Implementations
 
-In April 2017, we launched a directory for all implemented IX-F member exports. You can find it at: https://ml.ix-f.net/.
+In April 2017, we launched a directory for all implemented IX-F member exports and 2018 this was moved to the IXPDB website and you can find the list of IXPs exporting by selecting the API search here: https://ixpdb.euro-ix.net/en/ixpdb/providers/
 
 ### Stale / Potentially Broken Implementations 
 
@@ -24,7 +24,7 @@ In April 2017, we launched a directory for all implemented IX-F member exports. 
 
 The following have/had implementations but have not yet added themselves to the directory above.
 
-NAPAfricam, FL-IX, United IX, [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), [Telx](https://tie.telx.com/stats/members.json), [CATNIX](http://www.catnix.net/participants.json), [Gigapix](http://square.gigapix.pt/participants.json), FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)), [MIX Milan](http://www.mix-it.net/participants.json), [LINX](https://www.linx.net/members.json).
+NAPAfricam, FL-IX, United IX, [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), , FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)).
 
 ## Contact
 
@@ -33,3 +33,4 @@ Please send feedback to:
 * Barry O'Donovan <barry.odonovan@inex.ie>
 * Elisa Jasinska <elisa@bigwaveit.org>
 * Nick Hilliard <nick@inex.ie>
+* Bijal Sanghani <bijal@euro-ix.net>
