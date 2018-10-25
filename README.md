@@ -16,7 +16,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 
 ## Directory / Implementations
 
-In April 2017, we launched a directory for all implemented IX-F member exports and 2018 this was moved to the IXPDB website and you can find the list of IXPs exporting by selecting the API search here: https://ixpdb.euro-ix.net/en/ixpdb/providers/
+In April 2017, we launched a directory for all implemented IX-F member exports and in April 2018 this was moved to the IXPDB website and you can find the list of IXPs exporting their member lists by selecting the API option in the search: https://ixpdb.euro-ix.net/en/ixpdb/providers/
 
 ### Stale / Potentially Broken Implementations 
 
