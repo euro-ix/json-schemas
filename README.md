@@ -8,7 +8,7 @@ The key element of the IX-F Member Export is that it makes the individual IXP th
 
 ## Location
 
-It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: `http://www.example.com/participants.json
+It is suggested to locate the REST call under a well defined URI on the IXP's website, or use standard HTTP redirects (3xx). We recommend the location: https://www.example.com/participants.json
 
 ## Documentation
 
@@ -16,7 +16,7 @@ More detailed documentation is available on the [github wiki page](https://githu
 
 ## Directory / Implementations
 
-In April 2017, we launched a directory for all implemented IX-F member exports and in April 2018 this was moved to the IXPDB website and you can find the list of IXPs exporting their member lists by selecting the API option in the search: https://ixpdb.euro-ix.net/en/ixpdb/providers/
+In April 2017, we launched a directory for all implemented IX-F member exports and in April 2018 this was moved to the IXPDB website and you can find the list of IXPs exporting their member lists by selecting the API option in the search: https://ixpdb.euro-ix.net/en/ixpdb/ixps/?reverse=&sort=name&q=&api=on
 
 ### Stale / Potentially Broken Implementations 
 
@@ -24,7 +24,7 @@ In April 2017, we launched a directory for all implemented IX-F member exports a
 
 The following have/had implementations but have not yet added themselves to the directory above.
 
-NAPAfrica, FL-IX, United IX, [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), , FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)).
+NAPAfrica, FL-IX, United IX, [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)).
 
 ## Contact
 
