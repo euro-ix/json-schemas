@@ -2,10 +2,13 @@
 #######################################################################
 # IX Member List Schema
 #
-# Elisa Jasinska <elisa@bigwaveit.org>
-# Nick Hilliard <nick@inex.ie>
+# Elisa Jasinska
+# Nick Hilliard
+# Bijal Sanghani
+# Barry O'Donovan
+# Arnold Nipper
 #
-# version 0.6 - 2016-04-26
+# version 1.0 - 2019-07-18
 #
 #
 # revision history:
@@ -41,6 +44,11 @@
 #       + add: looking_glass_urls (array of strings, not required) to vlan ipv4/6
 #       + add: service_type (array of strings, not required) to member connection
 #       - remove: types probono and routeserver from member_list.member_type
+# v 1.0 * added new fields following euro-ix requirements
+#       + add: software to switches: (string, not required)
+#       + refactor service_type to an array of objects called 'services'
+#         and add: os: (string, not required), os_version: (string, not required),
+#       daemon: (string, not required), and daemon_version: (string, not required)
 
 
 
@@ -48,8 +56,8 @@
 # basic example
 
 {
-    "version": "0.7",
-    "timestamp": "2017-01-30T00:00:00Z",
+    "version": "1.0",
+    "timestamp": "2019-07-18T00:00:00Z",
     "ixp_list": [
        {
           "ixp_id": 42,
@@ -99,8 +107,8 @@
 # more complex example
 
 {
-    "version": "0.7",
-    "timestamp": "2017-01-30T00:00:00Z",
+    "version": "1.0",
+    "timestamp": "2019-07-18T00:00:00Z",
     "ixp_list": [
       {
         "shortname": "AMS-IX",
@@ -136,7 +144,8 @@
                 "city": "Amsterdam",
                 "country": "NL",
                 "manufacturer": "Acme Switch Co.",
-                "model": "Big Switch"
+                "model": "Big Switch",
+                "software": "SwitchOS"
             },
             {
                 "id": 1,
@@ -173,13 +182,13 @@
     ],
     "member_list": [
         {
-            "asnum": 2906,
+            "asnum": 65505,
             "member_type": "peering",
             "name": "Netflix",
             "url": "http://netflix.com/",
             "contact_email": [
-                "peering@netflix.com",
-                "mrpeering@netflix.com"
+                "peering@example.com",
+                "mrpeering@example.com"
             ],
             "contact_phone": [
                 "+1 1234 5678"
@@ -204,21 +213,21 @@
                         {
                             "vlan_id": 0,
                             "ipv4": {
-                                "address": "195.69.146.250",
+                                "address": "192.0.2.250",
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V4",
                                 "mac_addresses" : [
-                                    "00:0a:95:9d:68:16"
+                                    "00:11:22:33:44:16"
                                 ]
                             },
                             "ipv6": {
-                                "address": "2001:7f8:1::a500:2906:2",
+                                "address": "2001:db8::250",
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V6",
                                 "mac_addresses" : [
-                                    "00:0a:95:9d:68:16"
+                                    "00:11:22:33:44:16"
                                 ]
                             }
                         }
@@ -239,21 +248,76 @@
                         {
                             "vlan_id": 0,
                             "ipv4": {
-                                "address": "195.69.147.250",
+                                "address": "192.0.2.100",
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V4",
                                 "mac_addresses" : [
-                                    "00:0a:95:9d:68:16"
+                                    "00:11:22:33:44:17"
                                 ]
                             },
                             "ipv6": {
-                                "address": "2001:7f8:1::a500:2906:1",
+                                "address": "2001:db8::100",
                                 "routeserver": true,
                                 "max_prefix": 42,
                                 "as_macro": "AS-NFLX-V6",
                                 "mac_addresses" : [
-                                    "00:0a:95:9d:68:16"
+                                    "00:11:22:33:44:17"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "asnum": 65500,
+            "member_type": "ixp",
+            "name": "Example IXP",
+            "url": "http://ixp.example.com/",
+            "peering_policy": "mandatory",
+            "member_since": "2000-02-04T00:00:00Z",
+            "connection_list": [
+                {
+                    "ixp_id": 42,
+                    "state": "active",
+                    "if_list": [
+                        {
+                            "switch_id": 0,
+                            "if_speed": 10000,
+                        }
+                    ],
+                    "vlan_list": [
+                        {
+                            "vlan_id": 2,
+                            "ipv4": {
+                                "address": "192.0.2.254",
+                                "routeserver": false,
+                                "max_prefix": 100000,
+                                "as_macro": "AS-EXAMPLE-IX-RS",
+                                "services": [
+                                    {
+                                        "type": "ixrouteserver",
+                                        "os": "Ubuntu Linux",
+                                        "os_version": "18.04",
+                                        "daemon": "bird",
+                                        "daemon_version": "1.6.2",
+                                    }
+                                ]
+                            },
+                            "ipv6": {
+                                "address": "2001:db8::254",
+                                "routeserver": false,
+                                "max_prefix": 10000,
+                                "as_macro": "AS-EXAMPLE-IX-RS-V6",
+                                "services": [
+                                    {
+                                        "type": "ixrouteserver",
+                                        "os": "Ubuntu Linux",
+                                        "os_version": "18.04",
+                                        "daemon": "bird",
+                                        "daemon_version": "1.6.2",
+                                    }
                                 ]
                             }
                         }

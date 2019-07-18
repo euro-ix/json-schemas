@@ -151,6 +151,10 @@
                     "model": {
                       "description": "Free text field to indicate the model of the switch for informational purposes. Should not be present without manufacturer.",
                       "type": "string"
+                    },
+                    "software": {
+                      "description": "Free text field to indicate the software of the switch for informational purposes.",
+                      "type": "string"
                     }
                   }
                 }
@@ -383,11 +387,34 @@
                                     "type": "string"
                                   }
                                 },
-                                "service_type": {
-                                  "description": "ENUM field to indicate the service type(s) available from this connection. Defined types: 'ixrouteserver' (IX operated route server), 'ixroutecollector' (IX operated route collector)",
+                                "services": {
+                                  "description": "Array of IX operated service(s) available from this connection.",
                                   "type": "array",
                                   "items": {
-                                    "type": "string"
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "description": "The IX operated service available from this connection.",
+                                        "type": "string",
+                                        "enum": ["ixroutecollector", "ixrouteserver"]
+                                      },
+                                      "os": {
+                                        "description": "Free text field to indicate the operating system of the route server for informational purposes.",
+                                        "type": "string",
+                                      },
+                                      "os_version": {
+                                        "description": "Free text field to indicate the operating system version of the route server for informational purposes. Should not be present without os.",
+                                        "type": "string",
+                                      },
+                                      "daemon": {
+                                          "description": "Free text field to indicate the BGP software daemon that provides the route server for informational purposes.",
+                                        "type": "string",
+                                      },
+                                      "daemon_version": {
+                                          "description": "Free text field to indicate the BGP software daemon version that provides the route server for informational purposes. Should not be present without daemon.",
+                                        "type": "string",
+                                      }
+                                    }
                                   }
                                 }
                               }
@@ -421,11 +448,34 @@
                                     "type": "string"
                                   }
                                 },
-                                "service_type": {
-                                  "description": "ENUM field to indicate the service type(s) available from this connection. Defined types: 'ixrouteserver' (IX operated route server), 'ixroutecollector' (IX operated route collector)",
+                                "services": {
+                                  "description": "Array of IX operated service(s) available from this connection.",
                                   "type": "array",
                                   "items": {
-                                    "type": "string"
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "description": "The IX operated service available from this connection.",
+                                        "type": "string",
+                                        "enum": ["ixroutecollector", "ixrouteserver"]
+                                      },
+                                      "os": {
+                                        "description": "Free text field to indicate the operating system of the route server for informational purposes.",
+                                        "type": "string",
+                                      },
+                                      "os_version": {
+                                        "description": "Free text field to indicate the operating system version of the route server for informational purposes. Should not be present without os.",
+                                        "type": "string",
+                                      },
+                                      "daemon": {
+                                          "description": "Free text field to indicate the BGP software daemon that provides the route server for informational purposes.",
+                                        "type": "string",
+                                      },
+                                      "daemon_version": {
+                                          "description": "Free text field to indicate the BGP software daemon version that provides the route server for informational purposes. Should not be present without daemon.",
+                                        "type": "string",
+                                      }
+                                    }
                                   }
                                 }
                               }
