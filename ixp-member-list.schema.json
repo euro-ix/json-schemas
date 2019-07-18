@@ -32,7 +32,7 @@
 
             "ixp_id": {
               "description": "IXP numeric identifier, persistent value free to set by the IXP",
-              "type": "positiveInteger"
+              "type": "integer"
             },
             "shortname": {
               "description": "Short name of the IXP",
@@ -58,11 +58,11 @@
             },
             "ixf_id": {
               "description": "IXP ID from the IX-F database",
-              "type": "positiveInteger"
+              "type": "integer"
             },
             "peeringdb_id": {
               "description": "PeeringDB ID of the IX - the y in: https://www.peeringdb.com/ix/y",
-              "type": "positiveInteger"
+              "type": "integer"
             },
             "support_email": {
               "description": "Support email address",
@@ -122,7 +122,7 @@
 
                     "id": {
                       "description": "Unique ID of the switch",
-                      "type": "positiveInteger"
+                      "type": "integer"
                     },
                     "name": {
                       "description": "Switch name",
@@ -134,7 +134,7 @@
                     },
                     "pdb_facility_id": {
                       "description": "Peering DB ID of the data centre",
-                      "type": "positiveInteger"
+                      "type": "integer"
                     },
                     "city": {
                       "description": "City the switch is located in",
@@ -167,7 +167,7 @@
 
                     "id": {
                       "description": "Unique ID of the VLAN",
-                      "type": "positiveInteger"
+                      "type": "integer"
                     },
                     "name": {
                       "description": "VLAN name",
@@ -185,7 +185,7 @@
                         },
                         "mask_length": {
                           "description": "Mask length of the IPv4 address",
-                          "type": "positiveInteger"
+                          "type": "integer"
                         },
                         "looking_glass_urls": {
                           "description": "URLs of looking glass(es) available for this VLAN and protocol.",
@@ -209,7 +209,7 @@
                         },
                         "mask_length": {
                           "description": "Mask length of the IPv6 address",
-                          "type": "positiveInteger"
+                          "type": "integer"
                         },
                         "looking_glass_urls": {
                           "description": "URLs of looking glass(es) available for this VLAN and protocol.",
@@ -241,7 +241,7 @@
 
             "asnum": {
               "description": "AS number of the network",
-              "type": "positiveInteger"
+              "type": "integer"
             },
             "member_type": {
               "description": "Participant type: peering, ixp or other",
@@ -327,11 +327,11 @@
 
                             "switch_id": {
                               "description": "Switch ID where the interface or LAG is connected, persistent value free to set by the IXP",
-                              "type": "positiveInteger"
+                              "type": "integer"
                             },
                             "if_speed": {
                               "description": "Speed of the interface or LAG in Mb, i.e. 10G = 10000",
-                              "type": "positiveInteger"
+                              "type": "integer"
                             },
                             "if_type": {
                               "description": "Type of the interface or LAG",
@@ -352,7 +352,7 @@
 
                             "vlan_id": {
                               "description": "The VLAN ID this connection is placed in, persistent value free to set by the IXP",
-                              "type": "positiveInteger"
+                              "type": "integer"
                             },
                             "ipv4": {
                               "description": "The network's IPv4 address details in this VLAN",
@@ -370,7 +370,7 @@
                                 },
                                 "max_prefix": {
                                   "description": "The max number of prefixes on this connection for IPv4",
-                                  "type": "positiveInteger"
+                                  "type": "integer"
                                 },
                                 "routeserver": {
                                   "description": "Does this IPv4 address connect to the IXP routeserver",
@@ -408,7 +408,7 @@
                                 },
                                 "max_prefix": {
                                   "description": "The max number of prefixes on this connection for IPv6",
-                                  "type": "positiveInteger"
+                                  "type": "integer"
                                 },
                                 "routeserver": {
                                   "description": "Does this IPv6 address connect to the IXP routeserver",
