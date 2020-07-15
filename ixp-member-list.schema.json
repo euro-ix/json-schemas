@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IXP Member List Schema",
   "description": "A JSON schema representing an IXP Member List",
   "type": "object",
