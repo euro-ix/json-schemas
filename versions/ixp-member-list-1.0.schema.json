@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IXP Member List Schema",
   "description": "A JSON schema representing an IXP Member List",
   "type": "object",
@@ -400,19 +400,19 @@
                                       },
                                       "os": {
                                         "description": "Free text field to indicate the operating system of the route server for informational purposes.",
-                                        "type": "string",
+                                        "type": "string"
                                       },
                                       "os_version": {
                                         "description": "Free text field to indicate the operating system version of the route server for informational purposes. Should not be present without os.",
-                                        "type": "string",
+                                        "type": "string"
                                       },
                                       "daemon": {
                                           "description": "Free text field to indicate the BGP software daemon that provides the route server for informational purposes.",
-                                        "type": "string",
+                                        "type": "string"
                                       },
                                       "daemon_version": {
                                           "description": "Free text field to indicate the BGP software daemon version that provides the route server for informational purposes. Should not be present without daemon.",
-                                        "type": "string",
+                                        "type": "string"
                                       }
                                     }
                                   }
@@ -461,19 +461,19 @@
                                       },
                                       "os": {
                                         "description": "Free text field to indicate the operating system of the route server for informational purposes.",
-                                        "type": "string",
+                                        "type": "string"
                                       },
                                       "os_version": {
                                         "description": "Free text field to indicate the operating system version of the route server for informational purposes. Should not be present without os.",
-                                        "type": "string",
+                                        "type": "string"
                                       },
                                       "daemon": {
                                           "description": "Free text field to indicate the BGP software daemon that provides the route server for informational purposes.",
-                                        "type": "string",
+                                        "type": "string"
                                       },
                                       "daemon_version": {
                                           "description": "Free text field to indicate the BGP software daemon version that provides the route server for informational purposes. Should not be present without daemon.",
-                                        "type": "string",
+                                        "type": "string"
                                       }
                                     }
                                   }
