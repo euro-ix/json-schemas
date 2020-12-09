@@ -49,7 +49,8 @@
 #       + refactor service_type to an array of objects called 'services'
 #         and add: os: (string, not required), os_version: (string, not required),
 #       daemon: (string, not required), and daemon_version: (string, not required)
-
+# v 1.1 * added new fields to support recent PeeringDB changes
+#       + added quarantine (boolean, not required) field in ixp_list > vlan entries
 
 
 #######################################################################
@@ -160,6 +161,7 @@
             {
                 "id": 0,
                 "name": "ISP",
+                "quarantine": false,
                 "ipv4": {
                     "prefix": "80.249.208.0",
                     "mask_length": 21
@@ -172,6 +174,7 @@
             {
                 "id": 1,
                 "name": "GRX",
+                "quarantine": false,
                 "ipv4": {
                     "prefix": "193.105.101.0",
                     "mask_length": 23
