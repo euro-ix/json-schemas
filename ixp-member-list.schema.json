@@ -177,6 +177,10 @@
                       "description": "VLAN name",
                       "type": "string"
                     },
+                    "quarantine": {
+                      "description": "Determine if this Vlan is used for quarantine procedures",
+                      "type": "boolean"
+                    },
                     "ipv4": {
                       "description": "IPv4 details in this VLAN",
                       "type": "object",
