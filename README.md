@@ -30,3 +30,4 @@ Please send feedback to:
 * Elisa Jasinska <elisa@bigwaveit.org>
 * Nick Hilliard <nick@inex.ie>
 * Bijal Sanghani <bijal@euro-ix.net>
+* Leo Vegoda <leo@euro-ix.net>
