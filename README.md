@@ -22,10 +22,6 @@ In April 2017, we launched a directory for all implemented IX-F member exports a
 
 **POTENTIALLY STALE/BROKEN - THE ABOVE REFERENCED DIRECTORY WILL BE USED FROM HERE ON IN**
 
-The following have/had implementations but have not yet added themselves to the directory above.
-
-NAPAfrica, FL-IX, United IX, [SFMIX](http://sfmix.org/participants.json), [RIX](http://rix.is/participants.json), FranceIX ([PARIS](https://www.franceix.net/api/members/list/json?location=PAR), [MARSEILLE](https://www.franceix.net/api/members/list/json?location=MRS), [BOTH](https://www.franceix.net/api/members/list/json)).
-
 ## Contact
 
 Please send feedback to:
