@@ -53,7 +53,7 @@
               "format": "uri"
             },
             "country": {
-              "description": "ISO country code where the IXP is located",
+              "description": "The ISO3166 alpha-2 country code where the IXP is located",
               "type": "string"
             },
             "ixf_id": {
@@ -141,7 +141,7 @@
                       "type": "string"
                     },
                     "country": {
-                      "description": "Country the switch is located in",
+                      "description": "The ISO3166 alpha-2 country code the switch is located in",
                       "type": "string"
                     },
                     "manufacturer": {
