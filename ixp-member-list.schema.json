@@ -3,7 +3,7 @@
   "title": "IXP Member List Schema",
   "description": "A JSON schema representing an IXP Member List",
   "type": "object",
-  "required": ["version", "timestamp", "ixp_list", "member_list"],
+  "required": ["version", "timestamp", "ixp_list", "schema_email", "member_list"],
   "properties": {
 
     "version": {
@@ -63,6 +63,11 @@
             "peeringdb_id": {
               "description": "PeeringDB ID of the IX - the y in: https://www.peeringdb.com/ix/y",
               "type": "integer"
+            },
+            "schema_email": {
+              "description": "Email address to send schema error reports to",
+              "type": "string",
+              "format" : "email"
             },
             "support_email": {
               "description": "Support email address",
